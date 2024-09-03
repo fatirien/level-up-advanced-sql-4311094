@@ -1,0 +1,10 @@
+--create a list of employees and their immediate managers.
+
+select emp.firstName,
+  emp.lastName
+  emp.title
+  mng.firstName AS ManagerFirstName
+  mng.lastName AS ManagerLastName
+FROM employee emp
+INNER JOIN employee mng
+    ON emp.managerID = mng.employeeId
